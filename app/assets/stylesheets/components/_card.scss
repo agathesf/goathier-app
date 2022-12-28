@@ -1,9 +1,19 @@
 // CARD PROJECT //
 
 .card-project {
-	background-color: red;
+	border-bottom: 1px solid lightgray;
+    padding: 20px 0;
 	h3 {
 		font-size: 18px;
 		font-weight: 500;
+		width: 75%;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    mask: linear-gradient(90deg, black 0, black 90%, transparent 100%) alpha;
+	    -webkit-mask: linear-gradient(90deg, black 0, black 90%, transparent 100%);
+	}
+	p {
+		font-size: 14px;
+
 	}
 }
