@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+
+.home-container {
+	height: 100vh;
+}
+
+#logo {
+	font-family: 'Gamja Flower', cursive;
+	font-size: 80px;
+}
+
+#motto {
+	font-size: 14px;
+    font-weight: 500;
+    margin-top: -10px;
+	span {
+		font-family: 'Gamja Flower', cursive;
+		font-size: 20px;
+	}
+}
+

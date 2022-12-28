@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-container d-flex flex-column justify-content-center p-5 text-center w-100">
+	
+	<h1 id="logo">goathier</h1>
+	<p id="motto">Plan <span>&</span> analyse your business</p>
+	<%= link_to "Login or Sign Up", new_user_session_path, class: "btn btn-primary mt-5" %>
+</div>
