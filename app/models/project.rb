@@ -3,5 +3,5 @@ class Project < ApplicationRecord
   has_many :tasks
 
   # useless ? 
-  STATUS = ["Accepted", "Declined", "Pending"]
+  STATUS = ["Accepted", "Declined", "Pending", "Done & paid"]
 end

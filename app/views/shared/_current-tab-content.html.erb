@@ -1,0 +1,11 @@
+<div class="container">
+	<% @projects.each do |project| %>
+		<div class="card-project">
+			<h3><%= project.name %></h3>
+			<p><i class="fa-solid fa-money-bill-wave"></i> <%= project.price %> €</p>
+			<p><%= (project.time_target % 6) != 0 ? "#{project.time_target / 6} days & #{project.time_target % 6} hours" : "#{project.time_target / 6} days" %></p>
+			<p><%= project.status %></p>
+		</div>
+	<% end %>
+	<% console %>
+</div>
