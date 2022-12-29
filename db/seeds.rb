@@ -38,7 +38,7 @@ projects = []
   user = User.first
 
   project = Project.create!(name: name, price: price, time_target: time_target, user: user)
-  project.pending!
+  project.accepted!
   
   projects << project
 end

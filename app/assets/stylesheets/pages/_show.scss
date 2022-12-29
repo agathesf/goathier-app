@@ -1,0 +1,11 @@
+.top-show {
+	& h3 {
+		font-size: 21px;
+		font-weight: 500;
+		width: 75%;
+		overflow: hidden;
+		white-space: nowrap;
+		mask: linear-gradient(90deg, black 0, black 90%, transparent 100%) alpha;
+		-webkit-mask: linear-gradient(90deg, black 0, black 90%, transparent 100%);
+	}
+}

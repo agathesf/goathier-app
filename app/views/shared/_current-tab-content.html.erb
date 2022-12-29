@@ -1,17 +1,19 @@
 <% @projects.each do |project| %>
-	<div class="card-project">
-		<div class="align-items-center d-flex justify-content-between mb-1 top">
-			<h3><%= project.name %></h3>
+	<%= link_to project_path(project) do %>
+		<div class="card-project">
+			<div class="align-items-center d-flex justify-content-between mb-1 top">
+				<h3><%= project.name %></h3>
 
-			<% if project.status == "pending" %>
-				<p class="pill default"><%= project.status %></p>
-			<% elsif project.status == "declined" %>
-				<p class="pill red"><%= project.status %></p>
-			<% else %>
-				<p class="pill green"><%= project.status %></p>
-			<% end %>
+				<% if project.status == "pending" %>
+					<p class="pill default"><%= project.status %></p>
+				<% elsif project.status == "declined" %>
+					<p class="pill red"><%= project.status %></p>
+				<% else %>
+					<p class="pill green"><%= project.status %></p>
+				<% end %>
+			</div>
+			<p><i class="fa-solid fa-coins me-1"></i> <%= project.price %> €</p>
+			<p><i class="fa-solid fa-stopwatch me-1"></i> <%= project.hours_in_days %></p>
 		</div>
-		<p><i class="fa-solid fa-coins me-1"></i> <%= project.price %> €</p>
-		<p><i class="fa-solid fa-stopwatch me-1"></i> <%= project.hours_in_days %></p>
-	</div>
+	<% end %>
 <% end %>

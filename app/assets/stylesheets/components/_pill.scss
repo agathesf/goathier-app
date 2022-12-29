@@ -1,6 +1,8 @@
 .pill {
     padding: 3px 8px;
     border-radius: 3px;
+    text-transform: capitalize;
+    font-size: 14px;
 }
 
 .pill.default {

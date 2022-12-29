@@ -1,2 +1,14 @@
-<div class="navbar">
+<div class="bg-light navbar justify-content-around p-3 text-light w-100">
+	<%= link_to projects_path, class: "d-flex flex-column align-items-center" do %>
+		<i class="fa-solid fa-house"></i>
+		<p>Dashboard</p>
+	<% end %>
+	<%= link_to new_project_path, class: "d-flex flex-column align-items-center" do %>
+		<i class="fa-solid fa-circle-plus"></i>
+		<p>New project</p>
+	<% end %>
+	<%= link_to projects_path, class: "d-flex flex-column align-items-center" do %>
+		<i class="fa-solid fa-chart-simple"></i>
+		<p>Analytics</p>
+	<% end %>
 </div>

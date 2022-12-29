@@ -1,0 +1,14 @@
+.nav-item {
+	background: none;
+    border-bottom: 1px solid $dark;
+    & button {
+    	color: $dark;
+    }
+}
+
+.nav-link.active {
+	color: $dark !important;
+	background: none !important;
+    border-bottom: 2px solid $dark !important;
+    font-weight: 500;
+}
