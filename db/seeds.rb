@@ -35,11 +35,11 @@ projects = []
   name = Faker::Company.name
   price = rand(1000..5000)
   time_target = rand(10..180)
-  status = "Pending"
   user = User.first
 
-  project = Project.create!(name: name, price: price, time_target: time_target, status: status, user: user)
-
+  project = Project.create!(name: name, price: price, time_target: time_target, user: user)
+  project.pending!
+  
   projects << project
 end
 
@@ -48,9 +48,10 @@ end
   price = rand(1000..5000)
   time_target = rand(10..180)
   user = User.last
-  status = "Pending"
 
-  project = Project.create!(name: name, price: price, time_target: time_target, status: status, user: user)
+  project = Project.create!(name: name, price: price, time_target: time_target, user: user)
+  project.pending!
+
   projects << project
 end
 

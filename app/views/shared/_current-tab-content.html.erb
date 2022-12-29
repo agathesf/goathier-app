@@ -2,9 +2,16 @@
 	<div class="card-project">
 		<div class="align-items-center d-flex justify-content-between mb-1 top">
 			<h3><%= project.name %></h3>
-			<p><%= project.status %></p>
+
+			<% if project.status == "pending" %>
+				<p class="pill default"><%= project.status %></p>
+			<% elsif project.status == "declined" %>
+				<p class="pill red"><%= project.status %></p>
+			<% else %>
+				<p class="pill green"><%= project.status %></p>
+			<% end %>
 		</div>
-		<p><i class="fa-solid fa-money-bill-wave"></i> <%= project.price %> €</p>
-		<p><i class="fa-solid fa-stopwatch"></i> <%= (project.time_target % 6) != 0 ? "#{project.time_target / 6} days & #{project.time_target % 6} hours" : "#{project.time_target / 6} days" %></p>
+		<p><i class="fa-solid fa-coins me-1"></i> <%= project.price %> €</p>
+		<p><i class="fa-solid fa-stopwatch me-1"></i> <%= project.hours_in_days %></p>
 	</div>
 <% end %>

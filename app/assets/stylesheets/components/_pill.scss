@@ -1,0 +1,16 @@
+.pill {
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.pill.default {
+	background: $light;
+}
+
+.pill.green {
+	background: $green;
+}
+
+.pill.red {
+	background: $red;
+}
